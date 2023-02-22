@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="353.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Suppression2_mController">
+   <children>
+      <Label fx:id="labelsup2" layoutX="51.0" layoutY="68.0" prefHeight="98.0" prefWidth="457.0" text="Confirmez-vous la suppression ?" textFill="#046494">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmer2" layoutX="72.0" layoutY="238.0" mnemonicParsing="false" onAction="#confirmer2" prefHeight="39.0" prefWidth="147.0" styleClass="aj-btn" stylesheets="@Artiste.css" text="Je confirme" />
+      <Button fx:id="annuler2" layoutX="302.0" layoutY="238.0" mnemonicParsing="false" onAction="#annuler_supp2" prefHeight="39.0" prefWidth="147.0" styleClass="aj-btn" stylesheets="@Artiste.css" text="Annuler" />
+      <FontAwesomeIcon fill="#fff9f9" glyphName="CLOSE" layoutX="312.0" layoutY="268.0" size="2em" />
+      <FontAwesomeIcon fill="#fff7f7" glyphName="CHECK" layoutX="72.0" layoutY="268.0" size="2em" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="858.0" prefWidth="1337.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TicketsEvController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="74.0" prefHeight="761.0" prefWidth="327.0" />
+      <AnchorPane layoutX="349.0" layoutY="91.0" prefHeight="761.0" prefWidth="395.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <Label layoutX="14.0" layoutY="85.0" text="Nom Evènement" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="151.0" text="Prix Ticket">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="252.0" text="Type Ticket">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="EvNo" layoutX="168.0" layoutY="80.0" promptText="Nom Evènement" styleClass="textfield" stylesheets="@main.css" />
+            <Label fx:id="errevvnom" layoutX="198.0" layoutY="119.0" prefHeight="21.0" prefWidth="146.0" text="Vérifiez Ce Champ" textFill="#f20000" />
+            <TextField fx:id="PrixTik" layoutX="168.0" layoutY="146.0" promptText="Prix Ticket" styleClass="textfield" stylesheets="@main.css" />
+            <Label fx:id="errtikpr" layoutX="210.0" layoutY="190.0" text="Vérifiez Ce Champ" textFill="RED" />
+            <ComboBox fx:id="TypeTik" layoutX="168.0" layoutY="247.0" prefHeight="31.0" prefWidth="187.0" promptText="Type Ticket" styleClass="textfield" stylesheets="@main.css" />
+            <Button fx:id="TikAdd" layoutX="95.0" layoutY="357.0" mnemonicParsing="false" onAction="#AjouTT" prefHeight="39.0" prefWidth="209.0" styleClass="aj-btn" stylesheets="@main.css" text="Ajouter Ticket" />
+            <Button fx:id="TikUpd" layoutX="91.0" layoutY="444.0" mnemonicParsing="false" onAction="#TIKUPD" prefHeight="39.0" prefWidth="209.0" styleClass="mod-btn" stylesheets="@main.css" text="Midifier Ticket" />
+            <Button fx:id="TikDel" layoutX="87.0" layoutY="532.0" mnemonicParsing="false" onAction="#DelTikt" prefHeight="39.0" prefWidth="217.0" styleClass="del-btn" stylesheets="@main.css" text="Supprimer Ticket" />
+            <Button fx:id="TikSel" layoutX="87.0" layoutY="625.0" mnemonicParsing="false" onAction="#selectTIIK" prefHeight="39.0" prefWidth="217.0" styleClass="sel-btn" stylesheets="@main.css" text="          Sélectionner Ticket" />
+            <FontAwesomeIcon fill="WHITE" glyphName="CHECK" layoutX="111.0" layoutY="388.0" size="2em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="103.0" layoutY="476.0" size="2em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="REMOVE" layoutX="101.0" layoutY="562.0" size="2em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="LIST" layoutX="100.0" layoutY="656.0" size="1.5em" />
+            <Button fx:id="CLR222" layoutX="79.0" layoutY="712.0" mnemonicParsing="false" onAction="#CLR22" prefHeight="35.0" prefWidth="217.0" styleClass="aj-btn" stylesheets="@main.css" text="       Vider les champs" />
+            <FontAwesomeIcon fill="#fffdfd" glyphName="REFRESH" layoutX="98.0" layoutY="737.0" size="1.5em" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="754.0" layoutY="90.0" prefHeight="761.0" prefWidth="567.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <Label layoutX="38.0" layoutY="94.0" text="Rechercher ticket">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#c6c0c0" glyphName="SEARCH" layoutX="234.0" layoutY="104.0" />
+            <TextField fx:id="TikRech" layoutX="219.0" layoutY="84.0" prefHeight="31.0" prefWidth="280.0" promptText="Rechercher Ticket" />
+            <TableView fx:id="TikTable" layoutX="26.0" layoutY="147.0" prefHeight="597.0" prefWidth="521.0">
+              <columns>
+                <TableColumn fx:id="IdTicket" prefWidth="75.0" text="Id  Ticket" />
+                <TableColumn fx:id="PrixTicket" prefWidth="149.0" text="Prix Ticket" />
+                  <TableColumn fx:id="NomEvent" prefWidth="163.0" text="NomEvent" />
+                  <TableColumn fx:id="TypeTicket" prefWidth="133.0" text="Type Ticket" />
+              </columns>
+            </TableView>
+            <Label layoutX="139.0" layoutY="15.0" text="Liste Des Tickets" textFill="#1ab1d6">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="9.0" layoutY="39.0" prefHeight="47.0" prefWidth="1246.0" />
+      <Label layoutX="551.0" layoutY="19.0" text="Gestion Des Tickets" textFill="#1a00ff">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <VBox layoutX="-1.0" prefHeight="858.0" prefWidth="306.0" style="-fx-background-color: #003366;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_dashboard" graphicTextGap="10.0" mnemonicParsing="false" onAction="#godash121" prefHeight="74.0" prefWidth="308.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Dashboard" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="49.0" prefWidth="39.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="-15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Button fx:id="ao_btn_manage_users" graphicTextGap="10.0" mnemonicParsing="false" onAction="#GORLMT1" prefHeight="65.0" prefWidth="309.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Réclamer" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ao_btn_manage_roles" graphicTextGap="10.0" minHeight="0.0" mnemonicParsing="false" onAction="#BACKEVENT" prefHeight="109.0" prefWidth="260.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Retour En Arrière" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@funct.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="64.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_signout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#signout2233" prefHeight="68.0" prefWidth="262.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Se Déconnecter" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="84.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign%20out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Label fx:id="labelsignout" text="Label" textFill="TRANSPARENT" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

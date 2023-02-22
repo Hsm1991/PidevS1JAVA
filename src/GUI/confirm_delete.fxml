@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Confirm_deleteController">
+   <children>
+      <AnchorPane prefHeight="134.0" prefWidth="487.0">
+         <children>
+            <Text layoutX="119.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure you want to procede ?">
+               <font>
+                  <Font name="Malgun Gothic" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="183.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="( this action is irriversible ) ">
+               <font>
+                  <Font name="Malgun Gothic" size="11.0" />
+               </font>
+            </Text>
+            <Button fx:id="ao_btn_yes_del_role" layoutX="129.0" layoutY="109.0" mnemonicParsing="false" onAction="#confirmDelete" prefHeight="26.0" prefWidth="69.0" text="Yes" />
+            <Button fx:id="ao_btn_no_del_role" layoutX="279.0" layoutY="109.0" mnemonicParsing="false" onAction="#cancelDelete" prefHeight="26.0" prefWidth="70.0" text="No" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

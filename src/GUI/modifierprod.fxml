@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="821.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifierprodController">
+   <children>
+      <Label fx:id="exitNomerr" layoutX="848.0" layoutY="181.0" text="Nom exist" textFill="#e10b0b" />
+      <AnchorPane layoutX="344.0" layoutY="76.0" prefHeight="742.0" prefWidth="610.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;" stylesheets="@commande.css">
+         <children>
+            <Button fx:id="retour1" layoutX="375.0" layoutY="591.0" mnemonicParsing="false" onAction="#retourr" prefHeight="47.0" prefWidth="183.0" styleClass="aj-btn" stylesheets="@commande.css" text="Retour En Arrière" textFill="#53561d">
+               <font>
+                  <Font name="Arial Black" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifb" layoutX="21.0" layoutY="591.0" mnemonicParsing="false" onAction="#modif" prefHeight="47.0" prefWidth="139.0" styleClass="aj-btn" stylesheets="@commande.css" text="Modifier" textFill="#a9b230" textOverrun="CLIP">
+               <font>
+                  <Font name="Britannic Bold" size="24.0" />
+               </font>
+            </Button>
+            <TextField fx:id="da" layoutX="315.0" layoutY="488.0" prefHeight="26.0" prefWidth="248.0" styleClass="textfield" stylesheets="@commande.css" />
+            <TextField fx:id="pri" layoutX="315.0" layoutY="424.0" prefHeight="26.0" prefWidth="248.0" styleClass="textfield" stylesheets="@commande.css" />
+            <TextField fx:id="ty" layoutX="316.0" layoutY="358.0" prefHeight="26.0" prefWidth="248.0" styleClass="textfield" stylesheets="@commande.css" />
+            <TextField fx:id="qu" layoutX="316.0" layoutY="287.0" prefHeight="26.0" prefWidth="248.0" styleClass="textfield" stylesheets="@commande.css" />
+            <TextField fx:id="ref" layoutX="315.0" layoutY="221.0" prefHeight="26.0" prefWidth="248.0" styleClass="textfield" stylesheets="@commande.css" />
+            <TextField fx:id="nom" layoutX="314.0" layoutY="152.0" prefHeight="26.0" prefWidth="248.0" styleClass="textfield" stylesheets="@Artiste_1.css" />
+            <Label layoutX="48.0" layoutY="143.0" prefHeight="44.0" prefWidth="207.0" text="Nom            :">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="212.0" text="Référence   :">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="278.0" text="Quantité      :">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="347.0" text="Type            :">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="402.0" prefHeight="62.0" prefWidth="223.0" text="Prix              :">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="d" layoutX="45.0" layoutY="466.0" prefHeight="62.0" prefWidth="241.0" text="Date D'ajout:">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="135.0" layoutY="27.0" text="Modification D'un Produit" textFill="#00e0ff">
+               <font>
+                  <Font name="System Bold Italic" size="29.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="30.0" layoutY="627.0" size="2em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="CHEVRON_LEFT" layoutX="384.0" layoutY="622.0" size="1.2em" wrappingWidth="30.0" />
+            <Label fx:id="error" layoutX="269.0" layoutY="676.0" text="error" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="374.0" layoutY="8.0" text="Gestion De Stock" textFill="#1a00ff">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <VBox layoutY="-2.0" prefHeight="913.0" prefWidth="336.0" style="-fx-background-color: #003366;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_dashboard" graphicTextGap="10.0" mnemonicParsing="false" onAction="#modifdash" prefHeight="74.0" prefWidth="308.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Dashboard" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="49.0" prefWidth="39.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="-15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="542.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_signout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#signout1023214" prefHeight="68.0" prefWidth="262.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Se Déconnecter" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="84.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign%20out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Label fx:id="labelsignout" text="Label" textFill="TRANSPARENT" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

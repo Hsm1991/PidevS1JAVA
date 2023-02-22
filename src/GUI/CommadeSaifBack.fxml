@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CommadeSaifBackController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorPaneCommande" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="1603.0">
+         <children>
+            <Label layoutX="735.0" layoutY="29.0" stylesheets="@Artiste.css" text="Liste Des Commandes" textFill="#003366">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="1298.0" layoutY="32.0" text="Seléctionner Commande">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cb" layoutX="1315.0" layoutY="84.0" prefWidth="150.0" />
+            <Label fx:id="lbWarningFacture" layoutX="950.0" layoutY="638.0" text="Aucune facture selectionnée" textFill="RED" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="196.0" layoutX="70.0" layoutY="366.0" startX="-61.0" stroke="WHITE" />
+            <Label layoutX="68.0" layoutY="668.0" text="Se Déconnecter" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableCommandeSaif" editable="true" layoutX="299.0" layoutY="143.0" prefHeight="539.0" prefWidth="1262.0" stylesheets="@commande.css">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="42.0" text="id" />
+                  <TableColumn fx:id="idPanier" prefWidth="78.0" text="id Panier" />
+                  <TableColumn fx:id="idProd" minWidth="0.0" prefWidth="69.0" text="Id Prod" />
+                  <TableColumn fx:id="nomProd" prefWidth="201.0" text="Nom Prod" />
+                  <TableColumn fx:id="quantite" prefWidth="92.0" text="Quantité" />
+                  <TableColumn fx:id="prixUnitaire" prefWidth="121.0" text="Prix Unitaire" />
+                  <TableColumn fx:id="prixRem" prefWidth="167.0" text="Prix Après Remise" />
+                  <TableColumn fx:id="etatCmd" prefWidth="230.0" text="Etat Commande" />
+                  <TableColumn fx:id="date" prefWidth="259.0" text="Date Commande" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="-1.0" prefHeight="731.0" prefWidth="273.0" style="-fx-background-color: #003366;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_dashboard" graphicTextGap="10.0" mnemonicParsing="false" onAction="#redirectDashboardCommandeSaif" prefHeight="74.0" prefWidth="308.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Dashboard" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="49.0" prefWidth="39.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="-15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_signout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#signout600" prefHeight="68.0" prefWidth="262.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Se Déconnecter" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="84.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign%20out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Label fx:id="labelsignout" text="Label" textFill="TRANSPARENT" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

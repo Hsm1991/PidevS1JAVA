@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onDragDetected="#rtn5" prefHeight="954.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CommandeController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="64.0" prefHeight="886.0" prefWidth="336.0" styleClass="nav-form" stylesheets="@commande.css">
+         <children>
+            <Circle fill="#5493ae" layoutX="178.0" layoutY="167.0" radius="139.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="64.0" layoutY="316.0" prefHeight="75.0" prefWidth="183.0" text="Baz'Art" textFill="WHITE">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <Line endX="188.0" layoutX="144.0" layoutY="420.0" startX="-132.8000030517578" stroke="#fffcfc" />
+            <Button fx:id="zhuhcz" layoutX="38.0" layoutY="514.0" mnemonicParsing="false" onAction="#dash00" prefHeight="42.0" prefWidth="238.0" styleClass="aj-btn" stylesheets="@commande.css" text="Dashbord" />
+            <Button fx:id="aaa" layoutX="36.0" layoutY="608.0" mnemonicParsing="false" onAction="#reclamer" prefHeight="42.0" prefWidth="238.0" styleClass="aj-btn" stylesheets="@commande.css" text="Réclamer" />
+            <Button layoutX="24.0" layoutY="798.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="49.0" styleClass="aj-btn" stylesheets="@commande.css" />
+            <Label layoutX="86.0" layoutY="803.0" text="Se Déconnecter" textFill="WHITE" />
+            <FontAwesomeIcon glyphName="SIGN_OUT" layoutX="35.0" layoutY="821.0" size="1.5em" text="" wrappingWidth="28.000018310546693" />
+            <ImageView fitHeight="223.0" fitWidth="168.0" layoutX="92.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="264.0" layoutY="-6.0" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane layoutX="3.0" layoutY="7.0" prefHeight="129.0" prefWidth="1266.0">
+         <children>
+            <Label layoutX="486.0" text="Gestion De Stock" textFill="#1a00ff">
+               <font>
+                  <Font name="System Bold Italic" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="345.0" layoutY="63.0" prefHeight="886.0" prefWidth="910.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <Label layoutX="291.0" layoutY="150.0" text="chercher commande par nom du produit" textFill="#2525ea">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CMchercher" layoutX="667.0" layoutY="149.0" prefHeight="26.0" prefWidth="206.0" />
+            <TableView fx:id="CMtable" layoutX="12.0" layoutY="188.0" prefHeight="405.0" prefWidth="886.0">
+               <columns>
+                  <TableColumn fx:id="CMnomtab" minWidth="20.0" prefWidth="105.0" text="nom Produit" />
+                  <TableColumn fx:id="CMreferncetab" prefWidth="105.0" text="reference" />
+                  <TableColumn fx:id="CMquantitetab" prefWidth="105.0" text="quantite" />
+                  <TableColumn fx:id="CMdateAjouttab" prefWidth="127.20001220703125" text="date commande" />
+                  <TableColumn fx:id="CMtype" prefWidth="127.20001220703125" text="type" />
+               </columns>
+            </TableView>
+            <Button fx:id="rtn5" layoutX="406.0" layoutY="708.0" mnemonicParsing="false" onAction="#retourbtn5" prefHeight="54.0" prefWidth="183.0" styleClass="aj-btn" stylesheets="@commande.css" text="Retour En Arrière" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon glyphName="SEARCH" layoutX="854.0" layoutY="167.0" />
+            <Label layoutX="212.0" layoutY="15.0" text="Affichage Des Commandes" textFill="#2368c3">
+               <font>
+                  <Font name="System Bold Italic" size="29.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="WHITE" glyphName="CHEVRON_LEFT" layoutX="415.0" layoutY="744.0" size="1.4em" text="" wrappingWidth="30.00001211464405" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

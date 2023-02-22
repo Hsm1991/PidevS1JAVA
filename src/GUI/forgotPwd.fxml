@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="206.0" prefWidth="600.0" style="-fx-background-radius: 50; -fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ForgotPwdController">
+   <children>
+      <TextField fx:id="ao_pwd_email" layoutX="123.0" layoutY="88.0" prefHeight="26.0" prefWidth="358.0" promptText="Email" style="-fx-background-color: #fafafa;">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button fx:id="ao_btn_send_pwd" layoutX="251.0" layoutY="146.0" mnemonicParsing="false" onAction="#sendEmailPwd" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #61a2df; -fx-background-radius: 30;" text="Envoyer" textFill="WHITE" />
+      <Label layoutX="127.0" layoutY="35.0" prefHeight="26.0" prefWidth="393.0" text="Veuillez saisir votre adresse e-mail" textFill="#3b3434">
+         <font>
+            <Font name="Yu Gothic Medium" size="22.0" />
+         </font>
+      </Label>
+      <Line endX="253.4000244140625" endY="0.1999969482421875" layoutX="228.0" layoutY="119.0" startX="-100.0" stroke="#898585" />
+   </children>
+</AnchorPane>

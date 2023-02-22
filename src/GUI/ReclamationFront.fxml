@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReclamationFrontController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorPanePanier" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="1225.0">
+         <children>
+            <ScrollPane layoutX="359.0" layoutY="119.0" prefHeight="447.0" prefWidth="530.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="530.0">
+                     <children>
+                        <TableView fx:id="tablePanierSaif" editable="true" prefHeight="447.0" prefWidth="517.0">
+                           <columns>
+                              <TableColumn fx:id="colId" prefWidth="191.0" text="Id Réclamation" />
+                              <TableColumn fx:id="colSelon" prefWidth="134.0" text="Selon" />
+                              <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="191.0" text="Date Réclamation" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label layoutX="381.0" layoutY="14.0" text="Réclamations" textFill="#003366">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSupprimerProduitSaif" layoutX="976.0" layoutY="360.0" mnemonicParsing="false" onAction="#supprimerRec" prefHeight="58.0" prefWidth="183.0" styleClass="aj-btn" stylesheets="@Artiste.css" text="Supprimer Réclamation" />
+            <Label fx:id="lbWarningVideSaif" layoutX="964.0" layoutY="44.0" text="Votre panier Est Vide" textFill="#fc0000" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbWarningSelection" layoutX="965.0" layoutY="73.0" text="Selectionner un element" textFill="RED" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAjouter" layoutX="976.0" layoutY="154.0" mnemonicParsing="false" onAction="#ajouterRec" prefHeight="58.0" prefWidth="183.0" styleClass="aj-btn" stylesheets="@Artiste.css" text="Ajouter Réclamation" />
+            <Button fx:id="btnModifier" layoutX="976.0" layoutY="258.0" mnemonicParsing="false" onAction="#ModifierRec" prefHeight="58.0" prefWidth="183.0" styleClass="aj-btn" stylesheets="@Artiste.css" text="Modifier Réclamation" />
+            <Label fx:id="erreur" layoutX="433.0" layoutY="598.0" prefHeight="31.0" prefWidth="382.0" text="Veillez Séléctionner Une Réclamation" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="-4.0" layoutY="-2.0" prefHeight="716.0" prefWidth="276.0" style="-fx-background-color: #003366;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_dashboard" graphicTextGap="10.0" mnemonicParsing="false" onAction="#redirectDashboard" prefHeight="74.0" prefWidth="308.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Dashboard" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="49.0" prefWidth="39.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="-15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_signout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#signout1231" prefHeight="68.0" prefWidth="262.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Se Déconnecter" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="84.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign%20out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Label fx:id="labelsignout" text="Label" textFill="TRANSPARENT" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="382.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutTicketController">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="15.0" prefHeight="353.0" prefWidth="386.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <Label layoutX="2.0" layoutY="56.0" text="Nombre Tickets à Ajouter" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="123.0" text="Evènement">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="191.0" text="Type Ticket">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TIKins" layoutX="207.0" layoutY="51.0" prefHeight="31.0" prefWidth="173.0" styleClass="textfield" stylesheets="@main.css" />
+            <ComboBox fx:id="GetAllEV" layoutX="200.0" layoutY="118.0" prefHeight="31.0" prefWidth="181.0" styleClass="textfield" stylesheets="@main.css" />
+            <ComboBox fx:id="EVT" layoutX="198.0" layoutY="182.0" prefHeight="31.0" prefWidth="181.0" styleClass="textfield" stylesheets="@main.css" />
+            <Button fx:id="BackAdd" layoutX="5.0" layoutY="274.0" mnemonicParsing="false" onAction="#Arrrrr" prefHeight="31.0" prefWidth="173.0" styleClass="aj-btn" stylesheets="@main.css" text="Retour En Arrière" />
+            <Button fx:id="TIKadd" layoutX="230.0" layoutY="274.0" mnemonicParsing="false" onAction="#AjouterTicketsH" prefHeight="31.0" prefWidth="166.0" styleClass="aj-btn" stylesheets="@main.css" text="     Ajouter" />
+            <Label fx:id="errevvnom" layoutX="223.0" layoutY="91.0" prefHeight="21.0" prefWidth="146.0" text="Vérifiez Ce Champ" textFill="#f20000" />
+            <FontAwesomeIcon fill="WHITE" glyphName="CHECK" layoutX="237.0" layoutY="297.0" size="1.5em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="CHEVRON_LEFT" layoutX="14.0" layoutY="297.0" size="1.2em" />
+            <Label fx:id="errnbrrrt" layoutX="96.0" layoutY="14.0" text="Nbr de places insuffisant" textFill="#f50808">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="921.0" prefWidth="1976.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UserEventInterController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="109.0" prefHeight="761.0" prefWidth="363.0" styleClass="nav-form" stylesheets="@main.css">
+         <children>
+            <Circle fill="#5493ae" layoutX="152.0" layoutY="128.0" radius="112.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label layoutX="71.0" layoutY="283.0" text="Baz'Art" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold Italic" size="52.0" />
+               </font>
+            </Label>
+            <Line endX="196.0" layoutX="100.0" layoutY="414.0" startX="-61.0" stroke="WHITE" />
+            <Button fx:id="GOREC2" layoutX="83.0" layoutY="623.0" mnemonicParsing="false" onAction="#GORLMT" styleClass="nav-btn" stylesheets="@main.css" text="Passer Une Réclamatiion" />
+            <Button fx:id="Décccc55" layoutX="39.0" layoutY="700.0" mnemonicParsing="false" onAction="#out1236" prefHeight="35.0" prefWidth="46.0" styleClass="logout-btn" stylesheets="@main.css">
+               <graphic>
+                  <FontAwesomeIcon glyphName="SIGN_OUT" size="1.5em" styleClass="logout-btn" />
+               </graphic>
+            </Button>
+            <Label layoutX="105.0" layoutY="712.0" text="Se déconnecter" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="161.0" fitWidth="143.0" layoutX="82.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="85.0" layoutY="496.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="182.0" styleClass="aj-btn" stylesheets="@main.css" text="Aller Au panier" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="374.0" layoutY="107.0" prefHeight="761.0" prefWidth="502.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <AnchorPane layoutX="31.0" layoutY="98.0" prefHeight="335.0" prefWidth="438.0" styleClass="image-card" stylesheets="@main.css">
+               <children>
+                  <Label fx:id="disponibl5" layoutX="161.0" prefHeight="21.0" prefWidth="244.0" textFill="#d7d243">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font></Label>
+                  <ImageView fx:id="EventsDispo5" fitHeight="294.0" fitWidth="432.0" layoutX="1.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="ADDTIK" layoutX="124.0" layoutY="516.0" mnemonicParsing="false" onAction="#reservertiq" prefHeight="31.0" prefWidth="222.0" styleClass="aj-btn" stylesheets="@main.css" text="Réserver Ticket" />
+            <Button fx:id="BACKUSR" layoutX="263.0" layoutY="687.0" mnemonicParsing="false" onAction="#BACKUSR_btn" prefHeight="31.0" prefWidth="224.0" styleClass="aj-btn" stylesheets="@main.css" text="Retour En Arrière" />
+            <Button fx:id="panADD" layoutX="31.0" layoutY="687.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="212.0" styleClass="aj-btn" stylesheets="@main.css" text="Ajouter Au Panier" />
+            <Label layoutX="82.0" layoutY="43.0" text="Image Et Nom Evènement" textFill="#00a1ff">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="135.0" layoutY="580.0" text="Nombre de tickets à Réserver" textFill="#0ff3ff">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nbrTIK11" layoutX="135.0" layoutY="614.0" prefHeight="31.0" prefWidth="205.0" promptText="       Champ Optionnel" />
+            <Label fx:id="errnbrrrt" layoutX="162.0" layoutY="469.0" text="Evènement plein" textFill="#e40606">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="887.0" layoutY="107.0" prefHeight="761.0" prefWidth="1054.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <Label layoutX="38.0" layoutY="94.0" text="Rechercher un évènement">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="UserRech" layoutX="268.0" layoutY="89.0" prefHeight="31.0" prefWidth="296.0" promptText="       Rechercher un évènement" styleClass="search" stylesheets="@main.css" />
+            <FontAwesomeIcon fill="#c6c0c0" glyphName="SEARCH" layoutX="278.0" layoutY="110.0" />
+            <TableView fx:id="userevent" layoutX="10.0" layoutY="156.0" onMouseClicked="#SelectionEvent1" prefHeight="598.0" prefWidth="1036.0" styleClass="table-column" stylesheets="@main.css">
+              <columns>
+                <TableColumn fx:id="EventName" prefWidth="90.0" text="NomEvent" />
+                <TableColumn fx:id="EventAdddress" prefWidth="110.0" text="Adresse" />
+                  <TableColumn fx:id="EventCapacity" minWidth="0.0" prefWidth="81.0" text="Capacité" />
+                  <TableColumn fx:id="NbrTicketEV" minWidth="9.0" prefWidth="117.0" text="TicketsAchetés" />
+                  <TableColumn fx:id="StartE" minWidth="6.0" prefWidth="204.0" text="DateDebut" />
+                  <TableColumn fx:id="EndE" minWidth="0.0" prefWidth="172.0" text="DateFin" />
+                  <TableColumn fx:id="eventtype" prefWidth="94.0" text="Type" />
+                  <TableColumn fx:id="eventcategory" prefWidth="82.0" text="Catégorie" />
+                  <TableColumn fx:id="prixE" prefWidth="85.0" text="PrixEntrée" />
+              </columns>
+            </TableView>
+            <Label layoutX="15.0" layoutY="21.0" text="Liste Des Evènements Programmés" textFill="#1ab1d6">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="30.0" prefHeight="47.0" prefWidth="1792.0">
+         <children>
+            <Label layoutX="356.0" layoutY="-6.0" text="Bienvenue Dans Baz'Art Boutique" textFill="#79c4d0">
+               <font>
+                  <Font name="Segoe Print Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

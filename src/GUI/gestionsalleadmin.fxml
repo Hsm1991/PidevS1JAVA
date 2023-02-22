@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="1147.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Gestionsalleadmin">
+   <children>
+      <AnchorPane layoutX="237.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane fx:id="anchorpaneNb" layoutX="578.0" layoutY="76.0" prefHeight="492.0" prefWidth="499.0" styleClass="card-form" stylesheets="@fxml.css">
+         <children>
+            <TableView fx:id="tableNb" layoutX="19.0" layoutY="148.0" prefHeight="312.0" prefWidth="469.0" styleClass="table-column" stylesheets="@fxml.css">
+              <columns>
+                <TableColumn fx:id="numtableNb" prefWidth="109.0" text="Num Salle" />
+                  <TableColumn fx:id="typetaableNb" minWidth="8.0" prefWidth="96.0" text="Type Salle" />
+                  <TableColumn fx:id="statutableNb" prefWidth="93.0" text="Statut Salle" />
+                  <TableColumn fx:id="prixtableNb" prefWidth="169.0" text="Prix  De Réservation" />
+              </columns>
+            </TableView>
+            <TextField fx:id="recherche1Nb" layoutX="134.0" layoutY="53.0" styleClass="search" stylesheets="@main.css" />
+            <Text layoutX="6.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rechercher">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorpane2Nb" layoutX="272.0" layoutY="78.0" prefHeight="492.0" prefWidth="301.0" styleClass="card-form" stylesheets="@fxml.css">
+         <children>
+            <Button fx:id="supprimerNb" layoutX="75.0" layoutY="361.0" mnemonicParsing="false" onAction="#deletesalle" prefHeight="27.0" prefWidth="142.0" styleClass="del-btn" stylesheets="@fxml.css" text="Supprimer" />
+            <Button fx:id="modifierNb" layoutX="75.0" layoutY="310.0" mnemonicParsing="false" onAction="#updateSalle" prefHeight="27.0" prefWidth="142.0" styleClass="nav-btn" stylesheets="@fxml.css" text="Modifier " />
+            <Label fx:id="TypeNb" layoutX="33.0" layoutY="52.0" text="Type">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="StatuNb" layoutX="33.0" layoutY="105.0" text="Statut">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="prixNb" layoutX="36.0" layoutY="161.0" text="Prix">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <ComboBox fx:id="type1Nb" layoutX="82.0" layoutY="48.0" prefWidth="150.0" promptText="Veillez Séléctionner" styleClass="textfield" stylesheets="@main.css" />
+            <ComboBox fx:id="statu1Nb" layoutX="82.0" layoutY="101.0" prefWidth="150.0" styleClass="textfield" stylesheets="@main.css" />
+            <TextField fx:id="prix1Nb" layoutX="82.0" layoutY="157.0" prefHeight="39.0" prefWidth="150.0" styleClass="textfield" stylesheets="@main.css" />
+            <Button fx:id="ajouterNb" layoutX="75.0" layoutY="256.0" mnemonicParsing="false" onAction="#add_Salle" prefHeight="27.0" prefWidth="142.0" styleClass="nav-btn" stylesheets="@fxml.css" text="Ajouter" />
+            <Label fx:id="ctlNb2" layoutX="118.0" layoutY="115.0" text="Label" visible="false" />
+            <Label fx:id="ctlNb3" layoutX="124.0" layoutY="176.0" text="Label" visible="false" />
+            <Label fx:id="ctlNb4" layoutX="118.0" layoutY="232.0" text="Label" visible="false" />
+            <Label fx:id="lbWarningSalle" layoutX="48.0" layoutY="414.0" text="!Completer tous les champs!" textFill="#ff0101" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbWarningCorrect" layoutX="62.0" layoutY="445.0" text="Saisir des valeurs correctes" textFill="#f80909" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbWarningSelect" layoutX="86.0" layoutY="416.0" text="selectionner une salle" textFill="RED" visible="false" />
+            <FontAwesomeIcon fill="WHITE" glyphName="CHECK" layoutX="80.0" layoutY="280.0" size="2em" wrappingWidth="24.999998822808266" />
+            <FontAwesomeIcon fill="WHITE" glyphName="EDIT" layoutX="79.0" layoutY="335.0" size="2em" wrappingWidth="24.999998822808266" />
+            <FontAwesomeIcon fill="WHITE" glyphName="REMOVE" layoutX="81.0" layoutY="385.0" size="2em" wrappingWidth="24.999998822808266" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="548.0" layoutY="16.0" text="Gestion Des Salles" textFill="#1a00ff">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#f8f1f1" glyphName="SIGN_OUT" layoutX="26.0" layoutY="561.0" size="2em" text="" />
+      <VBox layoutX="-3.0" prefHeight="614.0" prefWidth="268.0" style="-fx-background-color: #003366;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_dashboard" graphicTextGap="10.0" mnemonicParsing="false" onAction="#dashboards" prefHeight="74.0" prefWidth="308.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Dashboard" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="49.0" prefWidth="39.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="-15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Button fx:id="ao_btn_manage_roles" graphicTextGap="10.0" minHeight="0.0" mnemonicParsing="false" onAction="#redirectresnada" prefHeight="109.0" prefWidth="260.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Retour En Arrière" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@funct.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_signout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#signout20221" prefHeight="68.0" prefWidth="262.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Se Déconnecter" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="84.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign%20out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Label fx:id="labelsignout" text="Label" textFill="TRANSPARENT" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

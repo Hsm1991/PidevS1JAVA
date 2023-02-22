@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="ownerWindow" prefHeight="869.0" prefWidth="1710.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainController">
+   <children>
+      <AnchorPane layoutX="276.0" layoutY="99.0" prefHeight="761.0" prefWidth="502.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <Label layoutX="5.0" layoutY="269.0" text="Nom Evènement" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="321.0" text="Adresse Evènement">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="381.0" text="Capacité Evènement">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="443.0" text="Nbr Tickets Achetés">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="503.0" text="Date-Début">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="561.0" text="Date-Fin">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="603.0" text="Type Evènement">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="649.0" text="Catégorie Evènement">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="698.0" text="Prix D'entrée">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="EventNa" layoutX="186.0" layoutY="259.0" prefHeight="40.0" prefWidth="309.0" promptText="Non évènement" styleClass="textfield" stylesheets="@main.css" />
+            <TextField fx:id="EventAdrr" layoutX="187.0" layoutY="316.0" prefHeight="39.0" prefWidth="309.0" promptText="Adresse évènement" styleClass="textfield" stylesheets="@main.css" />
+            <TextField fx:id="EventCap" layoutX="188.0" layoutY="376.0" prefHeight="39.0" prefWidth="309.0" promptText="Capacité évènement" styleClass="textfield" stylesheets="@main.css" />
+            <TextField fx:id="EventTick" layoutX="187.0" layoutY="438.0" prefHeight="39.0" prefWidth="309.0" promptText="Nombre Tickets Achetés" styleClass="textfield" stylesheets="@main.css" />
+            <DatePicker fx:id="DD" layoutX="187.0" layoutY="498.0" prefHeight="39.0" prefWidth="105.0" styleClass="textfield" stylesheets="@main.css" />
+            <Label fx:id="hh1" layoutX="297.0" layoutY="504.0" text="à">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+            <Label layoutX="401.0" layoutY="504.0" text="h">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <DatePicker fx:id="DF" layoutX="188.0" layoutY="546.0" prefHeight="39.0" prefWidth="105.0" styleClass="textfield" stylesheets="@main.css" />
+            <Text layoutX="297.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="à">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Text>
+            <Spinner fx:id="SP3" layoutX="311.0" layoutY="546.0" onMouseClicked="#SP3" prefHeight="39.0" prefWidth="83.0" styleClass="textfield" stylesheets="@main.css" />
+            <Label layoutX="402.0" layoutY="555.0" text="h">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <Spinner fx:id="SP4" layoutX="415.0" layoutY="546.0" onMouseClicked="#SP4" prefHeight="39.0" prefWidth="83.0" styleClass="textfield" stylesheets="@main.css" />
+            <ComboBox fx:id="EventTyp" layoutX="180.0" layoutY="598.0" prefHeight="39.0" prefWidth="318.0" promptText="        Veillez Séléctionner" styleClass="textfield" stylesheets="@main.css" />
+            <ComboBox fx:id="EventCat" layoutX="179.0" layoutY="644.0" prefHeight="39.0" prefWidth="318.0" promptText="        Veillez Séléctionner" styleClass="textfield" stylesheets="@main.css" />
+            <TextField fx:id="PrixEntEV" layoutX="179.0" layoutY="693.0" prefHeight="39.0" prefWidth="318.0" promptText="Prix d'entréee" styleClass="textfield" stylesheets="@main.css" />
+            <Label fx:id="errn" layoutX="213.0" layoutY="295.0" text="Vérifiez ce champ s.v.p" textFill="RED" />
+            <Label fx:id="erradrs" layoutX="199.0" layoutY="355.0" text="Vérifiez ce champ s.v.p" textFill="RED" />
+            <Label fx:id="errcp" layoutX="213.0" layoutY="411.0" text="Vérifiez ce champ s.v.p" textFill="RED" />
+            <Label fx:id="errtik" layoutX="199.0" layoutY="474.0" text="Vérifiez ce champ s.v.p" textFill="RED" />
+            <Label fx:id="errpric" layoutX="305.0" layoutY="734.0" text="Vérifiez ce champ s.v.p" textFill="#f20303" />
+            <AnchorPane layoutX="23.0" layoutY="22.0" prefHeight="217.0" prefWidth="402.0" styleClass="image-card" stylesheets="@main.css">
+               <children>
+                  <ImageView fx:id="EventsDispo" fitHeight="135.0" fitWidth="285.0" layoutX="59.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="disponibl" layoutX="162.0" layoutY="-1.0" prefHeight="21.0" prefWidth="244.0" textFill="#d7d243">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font></Label>
+                  <Button fx:id="importimg1" layoutX="125.0" layoutY="172.0" mnemonicParsing="false" onAction="#availableEventImportImage" styleClass="aj-btn" stylesheets="@main.css" text="Importer une image" />
+                  <Label fx:id="errn12" layoutX="103.0" layoutY="15.0" text="Veuillez insérer une image" textFill="RED" />
+               </children>
+            </AnchorPane>
+            <Spinner fx:id="SP1" layoutX="314.0" layoutY="498.0" onMouseClicked="#SP1" prefHeight="39.0" prefWidth="83.0" styleClass="textfield" stylesheets="@main.css" />
+            <Spinner fx:id="SP2" layoutX="414.0" layoutY="497.0" onMouseClicked="#SP2" prefHeight="39.0" prefWidth="83.0" styleClass="textfield" stylesheets="@main.css" />
+            <Label fx:id="errn1" layoutX="213.0" layoutY="239.0" text="Nom deja existant" textFill="RED" />
+            <Label fx:id="errn11" layoutX="10.0" layoutY="737.0" text="Vérifiez les champs de saisie d'entiers" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="781.0" layoutY="97.0" prefHeight="761.0" prefWidth="916.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <TableView fx:id="EventTable" layoutX="32.0" layoutY="147.0" onMouseClicked="#SelectionEvent" prefHeight="496.0" prefWidth="880.0" stylesheets="@main.css">
+              <columns>
+                <TableColumn fx:id="idEvent" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="NomEvent" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="AdresseEvent" prefWidth="75.0" text="Adresse" />
+                  <TableColumn fx:id="CapaciteEvent" prefWidth="75.0" text="Capacité" />
+                  <TableColumn fx:id="NbrTicketsAcheté" prefWidth="97.0" text="Tickets Achetés" />
+                  <TableColumn fx:id="DateDebutEvent" prefWidth="139.0" text="Date-Debut" />
+                  <TableColumn fx:id="DateFinEvent" prefWidth="116.0" text="Date-Fin" />
+                  <TableColumn fx:id="TypeEvent" prefWidth="81.0" text="Type" />
+                  <TableColumn fx:id="CategorieEvent" prefWidth="83.0" text="Catégorie" />
+                  <TableColumn fx:id="PrixEntrée" prefWidth="62.0" text="Prix" />
+              </columns>
+            </TableView>
+            <Label layoutX="38.0" layoutY="94.0" text="Rechercher un évènement">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="RecheV" layoutX="268.0" layoutY="89.0" prefHeight="31.0" prefWidth="296.0" promptText="       Rechercher un évènement" styleClass="search" stylesheets="@main.css" />
+            <Button fx:id="Sev1" layoutX="646.0" layoutY="85.0" mnemonicParsing="false" onAction="#Selection" styleClass="sel-btn" stylesheets="@main.css" text="Séléctionner évènement">
+               <graphic>
+                  <FontAwesomeIcon fill="#f2f2f2" glyphName="LIST" size="2em" />
+               </graphic></Button>
+            <Button fx:id="AddEvenement1" layoutX="38.0" layoutY="684.0" mnemonicParsing="false" onAction="#AddEvent" prefHeight="40.0" prefWidth="196.0" styleClass="aj-btn" stylesheets="@main.css" text="Ajouter évènement">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CHECK" size="2em" />
+               </graphic></Button>
+            <Button fx:id="ModEvent1" layoutX="256.0" layoutY="685.0" mnemonicParsing="false" onAction="#UpdateEvent" styleClass="mod-btn" stylesheets="@main.css" text="Modifier évènement">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="EDIT" size="2em" />
+               </graphic></Button>
+            <Button fx:id="SuppEvent1" layoutX="471.0" layoutY="685.0" mnemonicParsing="false" onAction="#SuprEv" styleClass="del-btn" stylesheets="@main.css" text="Supprimer évènement">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="REMOVE" size="2em" />
+               </graphic></Button>
+            <FontAwesomeIcon fill="#c6c0c0" glyphName="SEARCH" layoutX="278.0" layoutY="110.0" />
+            <Label layoutX="30.0" layoutY="11.0" text="Liste Des Evènements Programmés" textFill="#1ab1d6">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="clear2022" layoutX="707.0" layoutY="685.0" mnemonicParsing="false" onAction="#cler" prefHeight="40.0" prefWidth="180.0" styleClass="aj-btn" stylesheets="@main.css" text="Vider les champs">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="REFRESH" size="1.5em" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="106.0" prefHeight="761.0" prefWidth="327.0" />
+      <VBox layoutX="-1.0" prefHeight="869.0" prefWidth="273.0" style="-fx-background-color: #003366;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_dashboard" graphicTextGap="10.0" mnemonicParsing="false" onAction="#godsh_btn" prefHeight="74.0" prefWidth="308.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Dashboard" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="49.0" prefWidth="39.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="-15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Button fx:id="ao_btn_manage_users" graphicTextGap="10.0" mnemonicParsing="false" onAction="#GORLMT" prefHeight="65.0" prefWidth="309.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Réclamer" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ao_btn_manage_roles" graphicTextGap="10.0" minHeight="0.0" mnemonicParsing="false" onAction="#GoTIK" prefHeight="109.0" prefWidth="260.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Gestion Tickets" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@funct.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_signout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#signout" prefHeight="68.0" prefWidth="262.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Se Déconnecter" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="84.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign%20out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Label fx:id="labelsignout" text="Label" textFill="TRANSPARENT" />
+         </children>
+      </VBox>
+      <Label layoutX="578.0" layoutY="4.0" prefHeight="64.0" prefWidth="538.0" text="Gestion Des Evènements" textFill="#1a00ff">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

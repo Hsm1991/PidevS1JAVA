@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="669.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.OeuvVenController">
+   <children>
+      <AnchorPane fx:id="mainCenter_form_artiste_m2" layoutX="257.0" layoutY="67.0" prefHeight="600.0" prefWidth="461.0">
+         <children>
+            <AnchorPane layoutX="22.0" layoutY="5.0" prefHeight="608.0" prefWidth="510.0" style="-fx-border-radius: 10px; -fx-border-color: #454368; -fx-background-radius: 10px; -fx-background-color: #f6f6f6;">
+               <children>
+                  <TableView fx:id="table_vent2" layoutX="27.0" layoutY="103.0" prefHeight="423.0" prefWidth="480.0" styleClass="table-column" stylesheets="@Artiste.css">
+                     <columns>
+                        <TableColumn fx:id="idVent2" prefWidth="78.0" text="ID Oeuvre" />
+                        <TableColumn fx:id="DateVent2" prefWidth="149.0" text="Date vente Oeuvre" />
+                        <TableColumn fx:id="QteVendue2" prefWidth="138.0" text="Quantite Vendue" />
+                        <TableColumn fx:id="prixVente2" prefWidth="113.0" text="Prix Vente" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="recherche2" layoutX="14.0" layoutY="69.0" promptText="Recherche" styleClass="search" stylesheets="@Artiste.css" />
+                  <FontAwesomeIcon fill="#b9aeae" glyphName="SEARCH" layoutX="21.0" layoutY="85.0" />
+                  <FontAwesomeIcon fill="#f8f6f6" glyphName="CHECK" layoutX="47.0" layoutY="563.0" size="1.2em" />
+                  <FontAwesomeIcon fill="#f5f5f5" glyphName="EDIT" layoutX="206.0" layoutY="563.0" size="1.2em" text="" wrappingWidth="15.0" />
+                  <FontAwesomeIcon fill="#f8f1f1" glyphName="REMOVE" layoutX="359.0" layoutY="562.0" size="1.2em" />
+                  <FontAwesomeIcon fill="#f5f2f2" glyphName="REFRESH" layoutX="382.0" layoutY="89.0" size="1.5em" />
+                  <FontAwesomeIcon fill="#fcf5f5" glyphName="LIST" layoutX="241.0" layoutY="86.0" size="1.2em" />
+                  <Label layoutX="283.0" layoutY="7.0" prefHeight="39.0" prefWidth="199.0" text="Oeuvres Vendus" textFill="#94cfe3">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="376.0" text="Gestion Des Oeuvres" textFill="#1a00ff">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <VBox layoutX="-6.0" prefHeight="687.0" prefWidth="278.0" style="-fx-background-color: #003366;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_dashboard" graphicTextGap="10.0" mnemonicParsing="false" onAction="#dash2_btn" prefHeight="74.0" prefWidth="308.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Dashboard" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="49.0" prefWidth="39.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="-15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Button fx:id="ao_btn_manage_users" graphicTextGap="10.0" mnemonicParsing="false" onAction="#reclam_btn" prefHeight="65.0" prefWidth="309.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Réclamer" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="ao_btn_manage_roles" graphicTextGap="10.0" minHeight="0.0" mnemonicParsing="false" onAction="#gestion_prod_btn" prefHeight="109.0" prefWidth="260.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Gestion Produits" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@funct.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_signout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#signout550" prefHeight="68.0" prefWidth="262.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Se Déconnecter" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="84.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign%20out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Label fx:id="labelsignout" text="Label" textFill="TRANSPARENT" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

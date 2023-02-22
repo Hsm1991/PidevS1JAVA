@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="912.0" prefWidth="1526.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EVENTFRONTController">
+   <children>
+      <AnchorPane layoutX="333.0" layoutY="61.0" prefHeight="848.0" prefWidth="1181.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-background-color: #f8f8f8; -fx-border-color: #454368;">
+         <children>
+            <TableView fx:id="EventTable" layoutX="8.0" layoutY="346.0" onMouseClicked="#SelectionEvent" prefHeight="496.0" prefWidth="1166.0" stylesheets="@main.css">
+               <columns>
+                  <TableColumn fx:id="NomEvent" prefWidth="113.0" text="Nom" />
+                  <TableColumn fx:id="AdresseEvent" prefWidth="93.0" text="Adresse" />
+                  <TableColumn fx:id="CapaciteEvent" prefWidth="104.0" text="Capacité" />
+                  <TableColumn fx:id="NbrTicketsAcheté" prefWidth="134.0" text="Tickets Achetés" />
+                  <TableColumn fx:id="DateDebutEvent" prefWidth="210.0" text="Date-Debut" />
+                  <TableColumn fx:id="DateFinEvent" minWidth="4.0" prefWidth="189.0" text="Date-Fin" />
+                  <TableColumn fx:id="TypeEvent" minWidth="0.0" prefWidth="108.0" text="Type" />
+                  <TableColumn fx:id="CategorieEvent" minWidth="0.0" prefWidth="83.0" text="Catégorie" />
+                  <TableColumn fx:id="PrixEntrée" prefWidth="130.0" text="Prix" />
+               </columns>
+            </TableView>
+            <TextField fx:id="RecheV" layoutX="864.0" layoutY="18.0" prefHeight="31.0" prefWidth="296.0" promptText="       Rechercher un évènement" styleClass="search" stylesheets="@main.css" />
+            <FontAwesomeIcon fill="#c6c0c0" glyphName="SEARCH" layoutX="885.0" layoutY="38.0" />
+            <Label layoutX="30.0" layoutY="11.0" text="Liste Des Evènements Programmés" textFill="#1ab1d6">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="670.0" layoutY="22.0" onMouseClicked="#out1236" text="Rechercher un évènement">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="538.0" layoutY="100.0" prefHeight="217.0" prefWidth="424.0" styleClass="image-card" stylesheets="@main.css">
+               <children>
+                  <ImageView fx:id="EventsDispo" fitHeight="135.0" fitWidth="285.0" layoutX="59.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="disponibl" layoutX="162.0" layoutY="-1.0" prefHeight="21.0" prefWidth="244.0" textFill="#d7d243">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button fx:id="AddEvenement1" layoutX="104.0" layoutY="181.0" mnemonicParsing="false" onAction="#AddEvent" prefHeight="40.0" prefWidth="327.0" styleClass="aj-btn" stylesheets="@main.css" text="Acheter Un Ticket Pour Cet Evènement">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CHECK" size="2em" />
+               </graphic>
+            </Button>
+            <Label fx:id="message" layoutX="93.0" layoutY="261.0" text="Veillez sélectionner Un Evenement" textFill="RED">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="418.0" prefHeight="21.0" prefWidth="753.0" text="Bienvenue Dans BAZ'ART Boutique" textFill="#0f57f1">
+         <font>
+            <Font name="Segoe Print" size="31.0" />
+         </font>
+      </Label>
+      <VBox layoutX="-1.0" prefHeight="914.0" prefWidth="273.0" style="-fx-background-color: #003366;">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@amira.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="    Réserver votre Ticket !" wrappingWidth="258.0000244677067">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_dashboard" graphicTextGap="10.0" mnemonicParsing="false" onAction="#godash1001" prefHeight="74.0" prefWidth="308.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Dashboard" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="49.0" prefWidth="39.0">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="-15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="127.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="90.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="ao_btn_signout" graphicTextGap="10.0" mnemonicParsing="false" onAction="#signout" prefHeight="68.0" prefWidth="262.0" style="-fx-background-color: #003366;" stylesheets="@Dashboard.css" text="Se Déconnecter" textAlignment="CENTER" textFill="#e1e1de">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <AnchorPane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="84.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign%20out.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Button>
+            <Label fx:id="labelsignout" text="Label" textFill="TRANSPARENT" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
